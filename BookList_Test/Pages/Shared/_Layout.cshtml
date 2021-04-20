@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!--Head-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>@ViewData["Title"] - BookList_Test</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <!--End Head-->
+</head>
+
+<!-- body -->
+<body class="main-layout">
+    <!-- header -->
+    <header class="section">
+        <!-- header inner -->
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo"> <a href="index.html"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <div class="menu-area">
+                            <div class="limit-box">
+                                <nav class="main-menu">
+                                    <ul class="menu-area-main">
+                                        <li><a class="navbar-brand" asp-area="" asp-page="/Index">Home</a> </li>
+                                        <li> <a class="navbar-brand" asp-area="" asp-page="/BookList/Index">Shop</a></li>
+                                        <li> <a class="navbar-brand" asp-area="" asp-page="">Contact </a></li>
+                                        <li> <a class="navbar-brand" asp-area="" asp-page="/Login"><span class="glyphicon glyphicon-log-in"></span>Log In </a></li>
+                                        <li> <a class="navbar-brand navbar-" asp-area="" asp-page="">Cart</a></li>
+                                    @*    <li class="last"><a href="#"><img src="images/search_icon.png" alt="icon" /></a></li>*@
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end header inner -->
+        <!--notes for Anchor Tag Helper in ASP.NET
+        https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/anchor-tag-helper?view=aspnetcore-5.0
+        https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/image-tag-helper?view=aspnetcore-5.0 -->
+    </header>
+    <!-- end header -->
+   
+
+    <!--Container-->
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container" style="color: #ffffff">
+            &copy; 2021 The BroncoStore. All rights reserved. Use of this site signifies your agreement to the terms of use. - <a asp-area="" asp-page="/Privacy" style="color: #ffffff">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" scr="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.js"></script>
+    <script type="text/javascript" scr="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
